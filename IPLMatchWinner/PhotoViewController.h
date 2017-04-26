@@ -9,12 +9,21 @@
 #import <UIKit/UIKit.h>
 @import FirebaseDatabase;
 
-@interface PhotoViewController : UIViewController
+@interface PhotoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
+    NSArray *list;
+    NSDictionary *data;
+    NSString * player;
+}
 
-@property (strong, nonatomic) FIRDatabaseReference *ref;
+@property (retain, nonatomic) FIRDatabaseReference *ref;
+@property (nonatomic) FIRDatabaseHandle refHandle;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (strong, nonatomic) NSString *photoFilename;
 
 - (IBAction)addAPlayer:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITableView *playersList;
+
 @end

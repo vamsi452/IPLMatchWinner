@@ -30,7 +30,7 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     
-    NSString *url = @"https://desidine2go.com/";
+    NSString *url = @"http://www.iplt20.com/";
     NSURL *nsUrl = [NSURL URLWithString:url];
     NSURLRequest *request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
     
